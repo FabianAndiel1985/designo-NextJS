@@ -10,8 +10,6 @@ $lightGrey: #F1F3F5;
 //===== fonts ==========
 
 
-
-
 //==== basic styles ======
 
 :root {
@@ -30,12 +28,13 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  //padding: 64px 165px 0px 165px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
