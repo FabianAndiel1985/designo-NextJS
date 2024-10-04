@@ -1,0 +1,37 @@
+//==== colors ======
+$peach: #E7816B;
+$black:#1D1C1E;
+$white:#ffffff;
+
+$lightPeach: #FFAD9B;
+$darkGrey: #333136;
+$lightGrey: #F1F3F5;
+
+//===== sizes ==========
+
+$minDesktop: 1140px;
+$maxTablet: ($minDesktop - 1px);
+$minTablet: 768px;
+$maxMobile: ($minTablet - 1px); 
+$minMobile: 375px;
+
+//===== fonts ==========
+
+@mixin smallFont ($color:black) {
+    color: $color;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 100% */
+    letter-spacing: 2px;
+    }
+
+@mixin normalFont ($color:black) {
+    color: $color;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; 
+    }
+    
+

@@ -1,0 +1,26 @@
+@import '../../app/globals.scss';
+
+.navbar {
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    height:24px;
+    width:100%;
+
+    &__links {
+        display:inherit;
+        justify-content: space-between;
+        min-width:40%;
+    }
+
+}
+
+.darkLinks{
+    // color:blue !important;
+    @include smallFont($darkGrey);
+}
+
+
+.brightLinks{
+    @include smallFont($white);
+}

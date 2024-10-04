@@ -1,4 +1,5 @@
-import Footer from "@/components/Footer";
+import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Header/Navbar";
 import "./globals.scss";
 
 export const metadata = {
@@ -10,9 +11,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main>
-          {children}
-        </main>
+        <div className="header-footer-container">
+          <header>
+            <Navbar logoSrc={"/logo-dark.png"} brightLinks={false}/>
+          </header>
+          <main>
+            {children}
+          </main>
+        </div>
         <footer>
             <Footer/>
         </footer>

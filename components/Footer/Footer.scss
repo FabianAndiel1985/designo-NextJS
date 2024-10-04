@@ -1,6 +1,34 @@
+@import "../../app/variables.scss";
+
 .footer {
-    height:70px;
+    height:393px;
     background-color: black;
     margin:0px;
-    padding: 0px;
+    padding: 144px 165px 72px 165px;
+
+    hr {
+        margin-top: 40px;
+        border-color: $darkGrey;
+    }
+
+    #addressSocialMedia {
+        display: flex;
+        height:78px;
+        position:relative;
+        justify-content: space-between;
+        border: 2px solid white;
+        margin-top: 31px;
+        @include normalFont(#818182);
+        p{
+            margin:0px;
+        }
+
+        #contact-boxes-container{
+            position: relative;
+            border:2px solid blue;
+            display:flex;
+            width:65.71%;
+            justify-content: space-between;
+        }
+    }
 }
