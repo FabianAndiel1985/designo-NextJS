@@ -31,4 +31,9 @@
             justify-content: space-between;
         }
     }
+
+
+    @media (max-width: $maxTablet) {
+        padding: 166px 39px 80px 39px;
+      }
 }

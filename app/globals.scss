@@ -2,12 +2,9 @@
 
 
 .header-footer-container {
-  border: 2px solid black;
   padding: 65px 165px 0px;
-
   @media (max-width: $maxTablet) {
     padding: 65px 39px 0px;
-
   }
 }
 

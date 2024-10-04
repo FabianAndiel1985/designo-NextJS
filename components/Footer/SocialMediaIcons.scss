@@ -1,6 +1,13 @@
+@import "../../app/variables.scss";
+
 #social-media-icons {
-    width: 184px;
+    width: 16.56%;
     height: 24px;
-    border:2px solid white;
     margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $maxTablet) {
+        width: 26.67%;
+      }
 }
