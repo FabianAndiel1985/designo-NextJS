@@ -1,0 +1,18 @@
+@import "../../app/variables.scss";
+
+#contact-boxes-container{
+    position: relative;
+    display:flex;
+    width:65.71%;
+    justify-content: space-between;
+
+    
+
+    @media (max-width: $maxMobile) {
+        flex-direction: column;  
+        width:100%;      
+        :nth-child(2) {
+          margin-top: 40px;
+        }
+      }
+}

@@ -9,5 +9,11 @@
 
     @media (max-width: $maxTablet) {
         width: 26.67%;
+        margin: 40px auto;
+      }
+
+      @media (max-width: $maxMobile) {
+        width: 56.27%;
+       
       }
 }

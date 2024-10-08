@@ -1,6 +1,6 @@
 import React from 'react'
 import { ContactBox } from './ContactBox'
-
+import "./ContactBoxes.scss"
 
 export const ContactBoxes = ({address}) => {
 
