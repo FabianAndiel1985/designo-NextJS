@@ -16,11 +16,14 @@
 }
 
 .darkLinks{
-    // color:blue !important;
     @include smallFont($darkGrey);
 }
 
 
 .brightLinks{
     @include smallFont($white);
+}
+
+.center-image{
+    justify-content: center;
 }

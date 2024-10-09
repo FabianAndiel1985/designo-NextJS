@@ -23,7 +23,8 @@
         }
 
         @media (max-width: $maxMobile) {
-            flex-direction: column;            
+            flex-direction: column;
+            margin-top: 40px;            
           }
 
     }

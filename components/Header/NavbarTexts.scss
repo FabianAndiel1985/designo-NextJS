@@ -1,0 +1,19 @@
+@import "../../app/variables.scss";
+
+.navbar__links {
+    display:flex;
+    justify-content: space-between;
+    min-width:40%;
+}
+
+.navbar__links__footer{
+    @media (max-width:$maxMobile) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color:white;
+        min-height: 106px;
+        margin-top: 32px;
+    }
+
+}

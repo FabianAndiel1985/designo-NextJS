@@ -1,11 +1,16 @@
+
 import React from 'react'
 import Link from 'next/link';
+import "./NavbarTexts.scss";
+import useScreenSize from '@/hooks/useScreenSize';
 
-const NavbarTexts = () => {
-    const navbarLinks = [{title:"our company", link:"/"}, {title:"locations", link:"/"}, {title:"contact", link:"/"} ];
+const NavbarTexts = ({isHeader}) => {
+    const navbarLinks = [{title:"our copany", link:"/"}, {title:"locations", link:"/"}, {title:"contact", link:"/"} ];
     return (
         <>
-        {navbarLinks.map(item=><div><Link href={`${item.link}`}> {item.title.toUpperCase()} </Link></div>)}
+        <div className={`navbar__links ${isHeader ? '' : 'navbar__links__footer'}`}>
+          {navbarLinks.map(item=><div><Link href={`${item.link}`}> {item.title.toUpperCase()} </Link></div>)}
+        </div>
         </>
   )
 
