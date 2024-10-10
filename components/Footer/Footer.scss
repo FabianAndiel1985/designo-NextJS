@@ -11,6 +11,14 @@
         border-color: $darkGrey;
     }
 
+    .hideOnBiggerThanMobile {
+      display: none;
+
+      @media (max-width: $maxMobile)  {
+        display: initial;
+      }
+    }
+
     #addressSocialMedia {
         display: flex;
         height:78px;

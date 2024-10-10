@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="header-footer-container">
           <header>
-            <Navbar logoSrc={"/logo-dark.png"} brightLinks={false} isHeader={true}/>
+            <Navbar logoSrc={"/logo-dark.png"} isHeader={true} brightLinks={false} hideOnMobile={false}/>
           </header>
           <main>
             {children}

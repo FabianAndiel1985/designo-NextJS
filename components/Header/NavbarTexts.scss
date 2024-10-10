@@ -15,5 +15,10 @@
         min-height: 106px;
         margin-top: 32px;
     }
+}
 
+.hideLinks{
+    @media (max-width:$maxMobile) {
+        display:none;
+    }
 }

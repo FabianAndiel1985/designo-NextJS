@@ -1,22 +1,13 @@
-"use client";
-
 import React from 'react';
 import Image from 'next/image';
 import "./Navbar.scss";
 import NavbarTexts from './NavbarTexts';
-import useScreenSize from '@/hooks/useScreenSize';
 
-const Navbar = ({logoSrc, brightLinks, isHeader}) => {
-  const screenSize = useScreenSize();
-  let showNavbarLinks = true;
-
-  if(!isHeader && screenSize.width <  768  ) {
-    showNavbarLinks = false;
-  }
+const Navbar = ({logoSrc, isHeader, brightLinks, hideOnMobile}) => {
 
   return (
     <>    
-    <div className={`navbar ${brightLinks ? 'brightLinks' : 'darkLinks' } ${showNavbarLinks ? '' : 'center-image' }   `}>
+    <div className={`navbar ${hideOnMobile && !isHeader && 'center-image'}`}>
       <div>
         <Image
         src={logoSrc}
@@ -24,7 +15,7 @@ const Navbar = ({logoSrc, brightLinks, isHeader}) => {
         height={24}
         /> 
       </div>
-        {showNavbarLinks && <NavbarTexts isHeader={isHeader}/>}
+          <NavbarTexts isHeader={isHeader} brightLinks={brightLinks} hideOnMobile={hideOnMobile} />
     </div>
     </>
   )
