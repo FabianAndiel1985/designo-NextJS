@@ -7,17 +7,19 @@ export const TextBox = () => {
 
   return (
     <div className={"text-box"} >
+
+      <div>
+        <div>
+        </div>
+        <div>
+        </div>  
+      </div>  
+
+      <div>
+        
+      </div>
       
-      
-        {/* <Image
-         src={"/bg-pattern-call-to-action.svg"}
-         
-       
-          layout="fill" // Fills the container
-          objectFit="cover" // Can also use "contain" if needed
-          
-        /> */}
-      
+   
     </div>
   )
 }
