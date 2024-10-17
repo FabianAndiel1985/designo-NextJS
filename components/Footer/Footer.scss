@@ -1,7 +1,7 @@
 @import "../../app/variables.scss";
 
 .footer {
-    height:393px;
+    height:$footerHeightDesktop;
     background-color: black;
     margin:0px;
     padding: 144px 165px 72px 165px;

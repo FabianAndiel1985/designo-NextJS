@@ -1,0 +1,29 @@
+
+@import "../../app/variables.scss";
+
+button {
+    width:152px;
+    height: 56px;
+    padding: 17px 16px;
+    color:black;
+
+    font-family: Jost;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border:none;
+
+    border-radius: 8px;
+
+
+    &:hover {
+        background-color: $lightPeach;
+        color: $white;
+    }
+
+}
+

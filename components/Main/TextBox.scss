@@ -3,15 +3,93 @@
 .text-box {
     border-radius: 15px;
     height:292px;
-    margin: 10px 0px;
-    border:2px solid black;
+    margin: 0px 0px;
     background-color:#E7816B ;
-    padding: 95px 72px ;
+    padding:  72px 96px 46px 96px ;
     position: relative;
+    top: 72px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
     
     background-image: url('/bg-pattern-call-to-action.svg');
     background-repeat: no-repeat;
-    background-size: 82% ;
-    background-position: 100%;
-}
+    background-position: right;
+
+    @media(max-width: $maxTablet) {
+         background-position: -20px;
+         background-size: 120%;
+    }
+
+    @media(max-width: $maxMobile) {
+        background-size: 290%;
+        background-position: -70vw;
+   }
+    
+
+    &__first-element {
+        display: inherit;
+        flex-direction: column;
+        max-width:459px;
+        color: $white;
+        
+        div:first-of-type {
+           @include normalHeading($white);
+            height: 98px;
+            @media(max-width: $maxTablet) {
+                text-align: center;
+            }
+        }
+        div:nth-of-type(2) {
+            padding-top: 10px;
+            height:78px;
+            @include normalFont($white);
+            @media(max-width: $maxTablet) {
+                text-align: center;
+            }
+        }
+
+        @media(max-width: $maxTablet) {
+            display: flex;
+            align-items: center;
+            margin: auto;
+        }
+    }
+
+    &__second-element {
+        div:first-of-type {
+            display: flex;
+            flex-direction: column;
+            height: 98px;
+            justify-content: flex-end;
+            @media(max-width: $maxTablet) {
+                display: flex;
+                align-items: center;
+                height:unset;
+            }
+
+            @media(max-width: $maxMobile) {
+               margin-top: 32px;
+            }
+        }
+
+    }
+
+
+    @media(max-width: $maxTablet) {
+        display:inherit;
+        flex-direction: column;
+        height: 350px;
+        padding: 57px;
+        top:90px;
+    }
+
+    @media(max-width: $maxMobile) {
+        display:inherit;
+        flex-direction: column;
+        height: 379px;
+        padding: 64px 24px;
+        top:189px;
+    }
+
+} 
