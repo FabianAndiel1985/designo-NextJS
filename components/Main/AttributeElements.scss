@@ -1,5 +1,25 @@
+@import "../../app/variables.scss";
 .attribute_elements{
     display: flex;
     justify-content: space-between;
+    margin-bottom: calc(160px - 72px);
 
+    @media (max-width: $maxTablet) {
+        flex-direction: column;
+        height: 667px;
+        justify-content: space-between;
+        gap: 32px;
+        margin-bottom: calc(67px - 90px);
+    }
+
+    @media (max-width: $maxMobile) {
+        flex-direction: column;
+        height: 1396px;
+        justify-content: space-between;
+        gap: 80px;
+        margin-bottom: calc(121px - 189px);
+
+
+    }
+    
 }
