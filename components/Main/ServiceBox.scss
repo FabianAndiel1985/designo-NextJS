@@ -1,0 +1,101 @@
+@import "../../app/variables.scss";
+
+@mixin backgroundImgProps () {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+
+.service-box {
+
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:640px;
+    
+    div {
+        height: 94px;
+        text-transform: uppercase;
+        color: $white;
+    
+        h1 {
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 48px; /* 120% */
+            letter-spacing: 2px;
+        }
+
+        p{
+            text-align: center;
+            margin-top: 24px;
+
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 5px;
+        }
+    }
+
+    @media(max-width: $maxTablet) {
+        height:200px;
+    }
+
+    @media(max-width: $maxMobile) {
+        height:250px;
+    }
+    
+}
+
+.background-web-design {
+    background: 
+    linear-gradient(rgba(231, 129, 107, 0.7), rgba(231, 129, 107, 0.7 )),
+    url("/web-design-large.jpg");
+    width:48.56%;
+
+    @include backgroundImgProps();
+    
+    @media (max-width: $maxTablet) {
+        width:100%;
+        background: 
+            url("/web-design-large.jpg");
+        
+        @include backgroundImgProps();
+    }
+}
+
+.background-app-design {
+    background: 
+    url("/app-design.jpg");
+    height: 308px;
+
+    @include backgroundImgProps();
+    
+    @media(max-width: $maxTablet) {
+        height:200px;
+    }
+
+    @media(max-width: $maxMobile) {
+        height:250px;
+    }
+}
+
+.background-graphic-design {
+    background: 
+    url("/graphic-design.jpg");
+    height: 308px;
+
+    
+    @include backgroundImgProps();
+    
+    @media(max-width: $maxTablet) {
+        height:200px;
+    }
+
+    @media(max-width: $maxMobile) {
+        height:250px;
+    }
+}
+
