@@ -1,0 +1,47 @@
+@import "../../app/variables.scss";
+
+.top-box {
+    //padding: 145px 95px 0px 95px;
+
+    padding-top:145px;
+    height:640px;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $peach;
+    border-radius: $borderRadius;
+    margin-bottom: 160px;
+    overflow: hidden;
+    background-image: url("/bg-pattern-hero-home.svg");
+    background-repeat: no-repeat;
+    background-position: 120%;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    &__text-box{
+        position: relative;
+        max-width: 500px;
+      
+
+        h1{
+            @include normalHeading($white);
+            margin-bottom: 11px;
+        }
+        p{
+            @include normalFont($white);
+            margin-bottom: 40px;
+            margin-right: 95px;
+        }
+    }
+
+    &__image-box{
+        position: relative;
+        top:60px;
+        min-width:270px;
+        
+    }
+}
+
+
+
+
