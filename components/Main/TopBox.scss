@@ -15,18 +15,33 @@
     background-image: url("/bg-pattern-hero-home.svg");
     background-repeat: no-repeat;
     background-position: 120%;
-    
+    position: relative;
 
     div {
         width: 100%;
         height:100%;
-        border: 2px solid black;
-
+        position: relative;
         background-image: url("/image-hero-phone-old.png");
         background-repeat: no-repeat;
-        background-position: 120% -40px;
+        background-position: 140% -40px;
+        padding-top: 130px;
+        padding-left: 40px;
 
+        h1{
+            max-width: 450px;
+            @include normalHeading($white);
+            margin-bottom: 11px;
+        }
 
+        p{
+            @include normalFont($white);
+            max-width: 445px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1184px) and (min-width:$maxTablet) {
+            background-position: 170% -40px;
+        }
     }
 
    
