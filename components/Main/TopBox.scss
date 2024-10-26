@@ -3,10 +3,10 @@
 .top-box {
     //padding: 145px 95px 0px 95px;
 
-    padding-top:145px;
     height:640px;
     display: flex;
     justify-content: space-between;
+    position:relative;
 
     background-color: $peach;
     border-radius: $borderRadius;
@@ -15,30 +15,26 @@
     background-image: url("/bg-pattern-hero-home.svg");
     background-repeat: no-repeat;
     background-position: 120%;
-    padding-left: 70px;
-    padding-right: 70px;
+    
 
-    &__text-box{
-        position: relative;
-        max-width: 500px;
-      
+    div {
+        width: 100%;
+        height:100%;
+        border: 2px solid black;
 
-        h1{
-            @include normalHeading($white);
-            margin-bottom: 11px;
-        }
-        p{
-            @include normalFont($white);
-            margin-bottom: 40px;
-            margin-right: 95px;
-        }
+        background-image: url("/image-hero-phone-old.png");
+        background-repeat: no-repeat;
+        background-position: 120% -40px;
+
     }
 
-    &__image-box{
-        position: relative;
-        top:60px;
-        min-width:270px;
-        
+   
+
+    @media(max-width: $maxTablet ) {
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        height: 843px;
     }
 }
 
