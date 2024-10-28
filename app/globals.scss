@@ -1,12 +1,22 @@
 @import "./variables.scss";
 
 
-.header-footer-container {
-  padding: 65px 165px 0px;
-  @media (max-width: $maxTablet) {
-    padding: 65px 39px 0px;
+
+  main {
+
+    
+    .home-container {    
+      padding: 65px 165px 0px;
+      @media (max-width: $maxTablet) {
+        padding: 65px 39px 0px;
+      }     
+      .top-box {
+        @media (max-width: $maxMobile) {
+          display: none;
+        }
+      }
+    }
   }
-}
 
 :root {
   --background: #ffffff;

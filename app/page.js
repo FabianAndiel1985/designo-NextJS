@@ -8,13 +8,15 @@ import { TopBox } from "@/components/Main/TopBox";
 
 export default function Home() {
   return (
+  
     <> 
-      <main>
+      <TopBox/>
+      <div className={"home-container"}>
         <TopBox/>
         <ServiceBoxes/>
         <AttributeElements attributeElements={attributeElementContent}/>        
         <TextBox/>
-      </main>
+      </div>
     </>
   );
 }

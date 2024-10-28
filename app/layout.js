@@ -11,10 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <header>
+          <Navbar logoSrc={"/logo-dark.png"} isHeader={true} brightLinks={false} hideOnMobile={false}/>
+        </header>
         <div className="header-footer-container">
-          <header>
-            <Navbar logoSrc={"/logo-dark.png"} isHeader={true} brightLinks={false} hideOnMobile={false}/>
-          </header>
           <main>
             {children}
           </main>
