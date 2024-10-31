@@ -1,53 +1,36 @@
 @import "../../app/variables.scss";
 
 .top-box {
-    //padding: 145px 95px 0px 95px;
-
     height:640px;
     display: flex;
     justify-content: space-between;
     position:relative;
-
-    background-color: $peach;
     border-radius: $borderRadius;
     margin-bottom: 160px;
     overflow: hidden;
-    background-image: url("/bg-pattern-hero-home.svg");
-    background-repeat: no-repeat;
-    background-position: 120%;
     position: relative;
+    background: $peach url("/bg-pattern-hero-home.svg") no-repeat 120% ;
 
     div {
         width: 100%;
         height:100%;
-        position: relative;
-        background-image: url("/image-hero-phone-old.png");
-        background-repeat: no-repeat;
-        background-position: 120% -40px;
-        padding-top: 130px;
-        padding-left: 40px;
+        position: inherit;
+        background: url("/image-hero-phone-old.png") no-repeat 120% -40px; ;
+        padding: 130px 0 0 40px;
+
+
 
         h1{
             max-width: 450px;
             @include normalHeading($white);
             margin-bottom: 11px;
-            @media  (max-width:$maxTablet) { 
+            @media  (max-width:$maxTablet), (max-width:$maxMobile) { 
                 margin: 0px auto 8px auto;
                 text-align: center;
             }
 
             @media  (max-width:$maxMobile) { 
-                margin: 0px auto 8px auto;
-                text-align: center;
-
-                color: #FFF;
-                text-align: center;
-                font-family: Jost;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 36px;
-
+                @include biggerFont($white);
                 margin-bottom: 14px;
             }
         }
@@ -57,29 +40,17 @@
             max-width: 445px;
             margin-bottom: 40px;
 
-            @media  (max-width:$maxTablet) { 
+            @media  (max-width:$maxTablet), (max-width:$maxMobile)  { 
                 margin:  0px auto 19px auto;
                 text-align: center;
             }
 
             @media  (max-width:$maxMobile) { 
                 margin: 0px auto 8px auto;
-                text-align: center;
-
-                color: #FFF;
-                text-align: center;
-                font-family: Jost;
-                font-size: 15px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 25px; /* 166.667% */
+                @include normalFont($white);
                 margin-bottom: 24px;
-                
             }
         }
-
-  
-      
 
         @media (max-width: 1184px) and (min-width:$maxTablet) {
             background-position: 170% -40px;
@@ -101,8 +72,6 @@
 
     }
 
-   
-
     @media(max-width: $maxTablet ) {
         padding-top: 60px;
         flex-direction: column;
@@ -113,8 +82,8 @@
 
     @media(max-width: $maxMobile ) { 
         padding-top:80px;
+        border-radius: 0;
     }
-
 }
 
 

@@ -3,8 +3,11 @@
 
 
   main {
-
-    
+    .top-box-mobile {
+      @media (min-width: $maxMobile) {
+        display: none;
+      }
+    }
     .home-container {    
       padding: 65px 165px 0px;
       @media (max-width: $maxTablet) {

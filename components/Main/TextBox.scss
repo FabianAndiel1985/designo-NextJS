@@ -4,7 +4,7 @@
     border-radius: $borderRadius;
     height:292px;
     margin: 0px 0px;
-    background-color:#E7816B ;
+   
     padding:  72px 96px 46px 96px ;
     position: relative;
     top: 72px;
@@ -12,9 +12,8 @@
     display: flex;
     justify-content: space-between;
     
-    background-image: url('/bg-pattern-call-to-action.svg');
-    background-repeat: no-repeat;
-    background-position: right;
+    background: #E7816B url('/bg-pattern-call-to-action.svg') no-repeat right; 
+
 
     @media(max-width: $maxTablet) {
          background-position: -20px;
@@ -36,18 +35,11 @@
         div:first-of-type {
            @include normalHeading($white);
             height: 98px;
-            @media(max-width: $maxTablet) {
+            @media(max-width: $maxTablet), (max-width: $maxMobile)  {
                 text-align: center;
             }
             @media(max-width: $maxMobile) {
-                text-align: center;
-                color: #FFF;
-                text-align: center;
-                font-family: Jost;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 36px; 
+                @include biggerFont($white); 
             }
         }
         div:nth-of-type(2) {
@@ -84,7 +76,6 @@
         }
 
     }
-
 
     @media(max-width: $maxTablet) {
         display:inherit;

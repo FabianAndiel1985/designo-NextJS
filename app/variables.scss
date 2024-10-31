@@ -41,6 +41,13 @@ $footerHeightDesktop: 393px;
     line-height: 26px; 
     }
 
+    @mixin biggerFont ($color:black) {
+      color: $color;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; 
+      }
 
     //============== heading ================
 

@@ -10,7 +10,9 @@ export default function Home() {
   return (
   
     <> 
+    <div className={"top-box-mobile"}>
       <TopBox/>
+    </div>
       <div className={"home-container"}>
         <TopBox/>
         <ServiceBoxes/>
