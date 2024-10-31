@@ -2,8 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import "./Navbar.scss";
 import NavbarTexts from './NavbarTexts';
+import NavbarBurgerMenu from './NavbarBurgerMenu';
+
 
 const Navbar = ({logoSrc, isHeader, brightLinks, hideOnMobile}) => {
+
+  
 
   return (
     <>    
@@ -16,6 +20,8 @@ const Navbar = ({logoSrc, isHeader, brightLinks, hideOnMobile}) => {
         /> 
       </div>
           <NavbarTexts isHeader={isHeader} brightLinks={brightLinks} hideOnMobile={hideOnMobile} />
+          <NavbarBurgerMenu/>
+
     </div>
     </>
   )

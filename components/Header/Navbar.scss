@@ -5,13 +5,36 @@
     display:flex;
     justify-content: space-between;
     height:24px;
-    width:100%;
+    margin:64px 165px 70px 165px;  
+
 
     .hideOnMobile {
         @media (max-width:$maxMobile) {
             display: none;
         }
     }
+
+    &__hamburger-icon, &__close-icon {
+        margin: auto 0;
+        cursor: pointer;
+        :hover {
+            cursor: pointer;
+        }
+        @media (min-width:$minTablet) {
+            display: none;
+        }
+    }
+
+
+   
+    @media (max-width: $maxTablet) {
+        margin:64px 40px 70px;  
+    } 
+
+    @media (max-width: $maxMobile) {
+        margin:24px 35px 24px 37px;  
+    }
+
 }
 
 .center-image {
