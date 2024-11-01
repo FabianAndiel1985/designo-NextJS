@@ -1,28 +1,36 @@
 'use client';
 import React from 'react'
-import { useState } from 'react';
 import Image from 'next/image';
+import { useContext, useState} from "react";
+import { AppContext } from "@/context/context";
+
+
 
 const NavbarBurgerMenu = () => {
-    const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+
+
+  const [showBurgerIcon, setShowBurgerIcon] = useState(true);
+  const {toggleBurgerMenu} = useContext(AppContext);
+
+
   return (
    <>
-   { !showBurgerMenu &&
+   { showBurgerIcon &&
           <Image
             src={"/icon-hamburger.svg"}
             width={16}
             height={16}
             className='navbar__hamburger-icon'
-            onClick={()=>{ setShowBurgerMenu(true)}}
+            onClick={()=>{ setShowBurgerIcon(false);toggleBurgerMenu(true)}}
           />
           }
           {
-            showBurgerMenu &&
+            !showBurgerIcon &&
           <Image
             src={"/icon-close.svg"}
             width={20}
             height={20}
-            onClick={()=>{ setShowBurgerMenu(false)}}        
+            onClick={()=>{  setShowBurgerIcon(true);toggleBurgerMenu(false) }}        
             className='navbar__close-icon'
           />
         }

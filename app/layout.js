@@ -1,6 +1,10 @@
+import HamburgerMenu from "@/components/Main/HamburgerMenu";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Header/Navbar";
 import "./globals.scss";
+import AppContextProvider from "@/context/context";
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -8,13 +12,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
       <body>
+      <AppContextProvider>
         <header>
           <Navbar logoSrc={"/logo-dark.png"} isHeader={true} brightLinks={false} hideOnMobile={true}/>
         </header>
         <div className="header-footer-container">
+            <HamburgerMenu/>
           <main>
             {children}
           </main>
@@ -22,6 +30,7 @@ export default function RootLayout({ children }) {
         <footer>
             <Footer/>
         </footer>
+        </AppContextProvider>
       </body>
     </html>
   );

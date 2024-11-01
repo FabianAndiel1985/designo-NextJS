@@ -1,0 +1,28 @@
+@import "../../app/variables.scss";
+
+.menu-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 48px 24px;
+    position: absolute;
+    width:100%;
+    z-index: 1;
+    background-color: black;
+
+    li {
+        @include burgerMenuEntries($white);
+        list-style-type: none;
+    }
+
+    @media (min-width: $minTablet) {
+        display: none;
+    }
+
+}
+
+
+.hide-burger-menu{
+    display: none;
+}

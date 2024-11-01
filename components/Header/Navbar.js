@@ -21,7 +21,6 @@ const Navbar = ({logoSrc, isHeader, brightLinks, hideOnMobile}) => {
       </div>
           <NavbarTexts isHeader={isHeader} brightLinks={brightLinks} hideOnMobile={hideOnMobile} />
           <NavbarBurgerMenu/>
-
     </div>
     </>
   )
