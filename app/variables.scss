@@ -20,8 +20,6 @@ $minTablet: 768px;
 $maxMobile: ($minTablet - 1px); 
 $minMobile: 375px;
 
-$footerHeightDesktop: 393px;
-
 //===== fonts ==========
 
 @mixin smallFont ($color:black) {
