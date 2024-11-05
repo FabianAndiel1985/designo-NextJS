@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import Button from './Button';
 import "./ContactForm.scss";
 import * as Yup from 'yup'; 
+import { FormError } from './FormError';
 
 
 
@@ -45,38 +46,51 @@ export const ContactForm = () => {
       
       return (
         <form onSubmit={formik.handleSubmit}>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder={'Name'}
-            onChange={formik.handleChange}
-            value={formik.values.name}
-          />
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder={'Email'}
-            onChange={formik.handleChange}
-            value={formik.values.email}
-          />
-          <input
-            id="phone"
-            name="phone"
-            type="text"
-            placeholder={'Phone'}
-            onChange={formik.handleChange}
-            value={formik.values.phone}
-          />
-          <textarea
-            id="message"
-            name="message"
-            type="text"
-            placeholder={'Message'}
-            onChange={formik.handleChange}
-            value={formik.values.message}
-          />
+          <div className={"form__group"}>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder={'Name'}
+              onChange={formik.handleChange}
+              value={formik.values.name}
+            />
+            {formik.errors.name && formik.touched.name ? (
+             <FormError text={formik.errors.name}/>
+           ) : null}
+          </div>
+
+         <div className={"form__group"}>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder={'Email'}
+              onChange={formik.handleChange}
+              value={formik.values.email}
+            />
+          </div>
+          
+          <div className={"form__group"}>
+            <input
+              id="phone"
+              type="text"
+              placeholder={'Phone'}
+              onChange={formik.handleChange}
+              value={formik.values.phone}
+            />
+          </div>
+
+          <div className={"form__group"}>
+            <textarea
+              id="message"
+              name="message"
+              type="text"
+              placeholder={'Message'}
+              onChange={formik.handleChange}
+              value={formik.values.message}
+            />
+          </div>
     
           <Button text={"Submit"} type={"submit"} />
         </form>
