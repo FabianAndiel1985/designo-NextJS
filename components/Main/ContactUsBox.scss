@@ -30,9 +30,11 @@
             form{
             display: flex;
             flex-direction: column;
+            
             width:100%;
+        
 
-            label:not(:first-of-type) {
+            input:not(:first-of-type) {
                 margin-top:25px;
               }
 
@@ -40,10 +42,43 @@
                 border: none;
                 background: $peach;
                 border-bottom: 1px solid white;
+                height: 40px;
+                padding-left: 16px;
+                padding-bottom: 14px;
+                color: $white;
+
+                &:focus {
+                    outline: none;
+                    border:none;
+                    border-bottom: 1px solid white;
+                }
             }
+
+            input::placeholder, textarea::placeholder {
+                color:$white;
+                font-family: Jost;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px; /* 173.333% */
+            }
+
+            input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0px 1000px $peach inset;
+            -webkit-text-fill-color: $white;
+            transition: background-color 5000s ease-in-out 0s;
+            }
+
+
 
             textarea {
                 height: 76px;
+                margin-top: 25px;
             }
 
             button {

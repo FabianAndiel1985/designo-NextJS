@@ -3,8 +3,23 @@ import React from 'react';
 import { useFormik } from 'formik';
 import Button from './Button';
 import "./ContactForm.scss";
+import * as Yup from 'yup'; 
+
+
+
 
 export const ContactForm = () => {
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Can`t be empty'),
+    email: Yup.string().email('Invalid email').required('Can`t be empty'),
+  });
+
+
+
     const formik = useFormik({
         initialValues: {
           name: '',
@@ -12,7 +27,9 @@ export const ContactForm = () => {
           phone:'',
           message:''
         },
+        validationSchema,
         onSubmit: values => {
+          console.log()
           alert(JSON.stringify(values, null, 2));
         },
       });
@@ -28,47 +45,37 @@ export const ContactForm = () => {
       
       return (
         <form onSubmit={formik.handleSubmit}>
-          <label htmlFor="name">Name</label>
           <input
             id="name"
             name="name"
             type="text"
+            placeholder={'Name'}
             onChange={formik.handleChange}
             value={formik.values.name}
-            onFocus={(e)=> {handleFocus(e.target.name)}}
-            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
-          <label htmlFor="email">Email Address</label>
           <input
             id="email"
             name="email"
             type="email"
+            placeholder={'Email'}
             onChange={formik.handleChange}
             value={formik.values.email}
-            onFocus={(e)=> {handleFocus(e.target.name)}}
-            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
-    
-          <label htmlFor="phone">Phone</label>
           <input
             id="phone"
             name="phone"
             type="text"
+            placeholder={'Phone'}
             onChange={formik.handleChange}
             value={formik.values.phone}
-            onFocus={(e)=> {handleFocus(e.target.name)}}
-            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
-
-        <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
             type="text"
+            placeholder={'Message'}
             onChange={formik.handleChange}
             value={formik.values.message}
-            onFocus={(e)=> {handleFocus(e.target.name)}}
-            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
     
           <Button text={"Submit"} type={"submit"} />
