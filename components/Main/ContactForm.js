@@ -1,4 +1,8 @@
-import React from 'react'
+'use client'
+import React from 'react';
+import { useFormik } from 'formik';
+import Button from './Button';
+import "./ContactForm.scss";
 
 export const ContactForm = () => {
     const formik = useFormik({
@@ -12,6 +16,16 @@ export const ContactForm = () => {
           alert(JSON.stringify(values, null, 2));
         },
       });
+
+      const handleFocus=(attributeName)=>{
+         // console.log(attributeName);
+      }
+
+      const handleBlur=(attributeName)=>{
+        console.log(attributeName);
+    }
+
+      
       return (
         <form onSubmit={formik.handleSubmit}>
           <label htmlFor="name">Name</label>
@@ -21,8 +35,9 @@ export const ContactForm = () => {
             type="text"
             onChange={formik.handleChange}
             value={formik.values.name}
+            onFocus={(e)=> {handleFocus(e.target.name)}}
+            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
-    
           <label htmlFor="email">Email Address</label>
           <input
             id="email"
@@ -30,6 +45,8 @@ export const ContactForm = () => {
             type="email"
             onChange={formik.handleChange}
             value={formik.values.email}
+            onFocus={(e)=> {handleFocus(e.target.name)}}
+            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
     
           <label htmlFor="phone">Phone</label>
@@ -39,6 +56,8 @@ export const ContactForm = () => {
             type="text"
             onChange={formik.handleChange}
             value={formik.values.phone}
+            onFocus={(e)=> {handleFocus(e.target.name)}}
+            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
 
         <label htmlFor="message">Message</label>
@@ -47,10 +66,12 @@ export const ContactForm = () => {
             name="message"
             type="text"
             onChange={formik.handleChange}
-            value={formik.values.phone}
+            value={formik.values.message}
+            onFocus={(e)=> {handleFocus(e.target.name)}}
+            onBlur={(e)=> {handleBlur(e.target.name)}}
           />
     
-          <button type="submit">Submit</button>
+          <Button text={"Submit"} type={"submit"} />
         </form>
       );
 }
