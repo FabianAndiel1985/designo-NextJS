@@ -6,9 +6,6 @@ import "./ContactForm.scss";
 import * as Yup from 'yup'; 
 import { FormError } from './FormError';
 
-
-
-
 export const ContactForm = () => {
 
   const validationSchema = Yup.object().shape({
@@ -17,9 +14,11 @@ export const ContactForm = () => {
       .max(50, 'Too Long!')
       .required('Can`t be empty'),
     email: Yup.string().email('Invalid email').required('Can`t be empty'),
+    message: Yup.string()
+    .min(2, 'Too Short!')
+    .max(300, 'Too Long!')
+    .required('Can`t be empty')
   });
-
-
 
     const formik = useFormik({
         initialValues: {
@@ -29,19 +28,11 @@ export const ContactForm = () => {
           message:''
         },
         validationSchema,
-        onSubmit: values => {
-          console.log()
+        onSubmit: (values,{resetForm} ) => {
           alert(JSON.stringify(values, null, 2));
+          resetForm();
         },
       });
-
-      const handleFocus=(attributeName)=>{
-         // console.log(attributeName);
-      }
-
-      const handleBlur=(attributeName)=>{
-        console.log(attributeName);
-    }
 
       
       return (
@@ -69,6 +60,9 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
               value={formik.values.email}
             />
+             {formik.errors.email && formik.touched.email ? (
+             <FormError text={formik.errors.name}/>
+           ) : null}
           </div>
           
           <div className={"form__group"}>
@@ -90,6 +84,9 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
               value={formik.values.message}
             />
+            {formik.errors.message && formik.touched.message ? (
+             <FormError text={formik.errors.name}/>
+           ) : null}
           </div>
     
           <Button text={"Submit"} type={"submit"} />
