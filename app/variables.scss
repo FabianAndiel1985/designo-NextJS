@@ -60,7 +60,7 @@ $minMobile: 375px;
     //============== heading ================
 
 
-  @mixin normalHeading ($color:black) {
+  @mixin normalHeading ($color:black,$fontsize:40px) {
     color: $color;
     font-size: 40px;
     font-style: normal;

@@ -3,7 +3,6 @@
 $widthOnTablet: 83.16%;
 
 .contact-us-box {
-    color:white;
     border:2px solid black;
     background: $peach url('/bg-pattern-hero-desktop.svg') no-repeat left -160px; 
     display: flex;
@@ -13,12 +12,11 @@ $widthOnTablet: 83.16%;
     position: relative;
     
     &__text-box {
-        height:184px;
         width: 40.05%;
-        margin: 135px 95px 161px 95px;
+        margin: 135px 8.55% 161px 8.55%;
 
         @media (max-width: $maxTablet) {
-            margin: 71px auto 0px;
+            margin: 71px auto 40px;
             width: $widthOnTablet;
             height:158px;
         }
@@ -29,22 +27,26 @@ $widthOnTablet: 83.16%;
 
         h1 {
             margin-bottom: 32px;
-            @include 
+            @include normalHeading($white,48px);
         }
 
         p {
+            @include normalFont($white);
              
         }
     }
 
     &__form {
-        margin: 55px 96px 54px 0px; 
+        margin: 0px 96px 54px 0px; 
         width: 34.2%;
 
         @media (max-width: $maxTablet) {
-            margin: 40px auto auto;
+            margin: 0px auto;
             width: $widthOnTablet;
+            margin-bottom: 35px;
         }
+
+
 
     }
 
