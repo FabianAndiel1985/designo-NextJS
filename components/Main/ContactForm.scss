@@ -63,5 +63,9 @@ form{
         margin-left: auto;
         margin-top: 24px;
 
+        @media (max-width: $maxMobile) {
+            margin: 40px auto;
+        }
+
     }
 }

@@ -1,5 +1,7 @@
 @import "./../../app/variables.scss";
 
+$widthOnTablet: 83.16%;
+
 .contact-us-box {
     color:white;
     border:2px solid black;
@@ -15,17 +17,42 @@
         width: 40.05%;
         margin: 135px 95px 161px 95px;
 
+        @media (max-width: $maxTablet) {
+            margin: 71px auto 0px;
+            width: $widthOnTablet;
+            height:158px;
+        }
+        
+        @media (max-width: $maxMobile) {
+            text-align: center;
+        }
+
         h1 {
             margin-bottom: 32px;
+            @include 
         }
 
         p {
-            
+             
         }
     }
 
     &__form {
         margin: 55px 96px 54px 0px; 
         width: 34.2%;
+
+        @media (max-width: $maxTablet) {
+            margin: 40px auto auto;
+            width: $widthOnTablet;
+        }
+
     }
+
+    @media (max-width: $maxTablet) {
+        flex-direction: column;
+        height:711px;
+    }
+
+
+
 }
