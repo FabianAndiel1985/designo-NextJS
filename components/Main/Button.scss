@@ -16,14 +16,24 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     border:none;
-
     border-radius: 8px;
+}
 
-
+.silver {
     &:hover {
         background-color: $lightPeach;
         color: $white;
     }
-
 }
+
+.orange {
+    background-color: $lightPeach;
+    &:hover {
+        background-color: initial;
+        color: initial;
+    }
+}
+
+
+
 
