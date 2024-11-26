@@ -12,13 +12,15 @@ const HamburgerMenu = () => {
     const texts = ["our company", "locations", "contact"]
 
   return (
-    <ul className={`menu-elements ${!showBurgerMenu && "hide-burger-menu"} `}>
-        {
-            texts.map(e=>(
-                <li> {e.toUpperCase()} </li>
-            ))
-        }
-    </ul>
+    <>
+      <ul className={`menu-elements ${!showBurgerMenu && "hide-burger-menu"} `}>
+          {
+              texts.map(e=>(
+                  <li> {e.toUpperCase()} </li>
+              ))
+          }
+      </ul>
+    </>
   )
 }
 

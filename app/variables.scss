@@ -39,6 +39,15 @@ $minMobile: 375px;
     line-height: 26px; 
     }
 
+  @mixin bigFont ($color:black) {
+    color:$color;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; 
+    letter-spacing: 5px;
+  }
+
   @mixin burgerMenuEntries ($color:black) {
   color: $color;
   font-size: 24px;

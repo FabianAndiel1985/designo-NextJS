@@ -21,12 +21,13 @@ const backgroundClass = findBackgroundClass(heading);
 
 
   return (
-
-    <div className={`service-box ${backgroundClass} ${desktopSize && 'medium-desktop-size'}`}>
-        <div>
-            <h1>{heading}</h1>
-            <p>{subtext}</p>
-        </div>
-    </div>
+    <>    
+      <div className={`service-box ${backgroundClass} ${desktopSize && 'medium-desktop-size'}`}>
+          <div>
+              <h1>{heading}</h1>
+              <p>{subtext}</p>
+          </div>
+      </div>
+    </>
   )
 }

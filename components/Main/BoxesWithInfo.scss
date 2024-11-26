@@ -1,0 +1,18 @@
+@import "../../app/variables.scss";
+
+.boxes-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 160px 0px;
+
+    @media (max-width: $maxTablet) {
+        margin-top: 120px;
+        flex-direction: column;
+        height: 1230px;
+    }
+
+    @media (max-width: $maxMobile) {
+        margin: 120px 0px;
+    }
+    
+}

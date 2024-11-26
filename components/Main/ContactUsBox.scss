@@ -3,13 +3,13 @@
 $widthOnTablet: 83.16%;
 
 .contact-us-box {
-    border:2px solid black;
     background: $peach url('/bg-pattern-hero-desktop.svg') no-repeat left -160px; 
     display: flex;
     justify-content: space-between;
     height:480px;
     border-radius: $borderRadius;
     position: relative;
+    
     
     &__text-box {
         width: 40.05%;
@@ -37,7 +37,7 @@ $widthOnTablet: 83.16%;
     }
 
     &__form {
-        margin: 0px 96px 54px 0px; 
+        margin: 55px 96px 54px 0px; 
         width: 34.2%;
 
         @media (max-width: $maxTablet) {
@@ -54,6 +54,11 @@ $widthOnTablet: 83.16%;
         flex-direction: column;
         height:711px;
     }
+
+    @media (max-width: $maxMobile) {
+        border-radius: initial;
+    }
+
 
 
 

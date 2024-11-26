@@ -1,8 +1,28 @@
+@import "../../app/variables.scss";
+
 #contact-page {
-padding: 0px 164px 160px 165px;
+    padding: 0px 164px 0px 165px;
 
+    @media (max-width: $maxTablet) {
+        padding: 0px 40px 0px 39px;
+    }
 
-
-
-
+    @media (max-width: $maxMobile) {
+        padding: 0px;
+    }
 }
+
+.footer {
+    height:337px;
+    padding: 72px 165px; 
+
+    @media (max-width: $maxTablet) {
+        padding: 80px 39px;
+    }
+
+    @media (max-width: $maxMobile) {
+        height:626px;
+        padding: 64px 24px;
+    }
+}
+

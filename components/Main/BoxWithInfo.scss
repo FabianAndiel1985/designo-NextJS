@@ -1,0 +1,33 @@
+@import "../../app/variables.scss";
+
+.box-with-info{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    &__image {
+        position: relative;
+        width:202px;
+        height:202px;
+        background: url("/bg-pattern-small-circle.svg");
+        margin-bottom: 48px;
+    }
+
+    &__sub {
+        text-align: center;
+        h1 {
+            @include bigFont();
+            text-emphasis: center;
+            margin-bottom: 32px;
+        }
+    }
+
+}
+
+.attribute {
+    @media (max-width:$maxTablet) {
+    flex-direction: row;
+    }
+}
+
+
+

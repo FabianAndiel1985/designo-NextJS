@@ -27,12 +27,16 @@ button {
 }
 
 .orange {
-    background-color: $lightPeach;
+    background-color: $peach;
+    color: white;
     &:hover {
-        background-color: initial;
-        color: initial;
+        background-color: $lightPeach;
     }
 }
+
+
+
+
 
 
 
