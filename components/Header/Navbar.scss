@@ -44,13 +44,6 @@
 }
 
 
-.navbar__links {
-    display:flex;
-    justify-content: space-between;
-    min-width:50%;
-} 
-
-
 .darkLinks{
     @include smallFont($darkGrey);
 }

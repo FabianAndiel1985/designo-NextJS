@@ -88,7 +88,6 @@ export const ContactForm = () => {
              <FormError text={formik.errors.name}/>
            ) : null}
           </div>
-    
           <Button text={"Submit"} type={"submit"} />
         </form>
       );

@@ -4,6 +4,11 @@
     display:flex;
     justify-content: space-between;
     min-width:40%;
+    @media (max-width: 855px) {
+        min-width:47%;
+    }
+
+
 }
 
 .navbar__links__footer{

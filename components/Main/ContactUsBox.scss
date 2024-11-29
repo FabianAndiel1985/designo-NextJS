@@ -28,11 +28,14 @@ $widthOnTablet: 83.16%;
         h1 {
             margin-bottom: 32px;
             @include normalHeading($white,48px);
+            @media (max-width:$maxMobile) {
+                @include biggerFont($white);
+                margin-bottom: 24px;
+            }
         }
 
         p {
-            @include normalFont($white);
-             
+            @include normalFont($white); 
         }
     }
 
@@ -57,6 +60,7 @@ $widthOnTablet: 83.16%;
 
     @media (max-width: $maxMobile) {
         border-radius: initial;
+        height:764px;
     }
 
 
