@@ -6,7 +6,7 @@ import { AppContext } from "@/context/context";
 
 
 
-const NavbarBurgerMenu = () => {
+const NavbarBurgerMenu = ({isHeader}) => {
 
 
   const [showBurgerIcon, setShowBurgerIcon] = useState(true);
@@ -15,7 +15,7 @@ const NavbarBurgerMenu = () => {
 
   return (
    <>
-   { showBurgerIcon &&
+   { showBurgerIcon && isHeader &&
           <Image
             src={"/icon-hamburger.svg"}
             width={16}
@@ -25,7 +25,7 @@ const NavbarBurgerMenu = () => {
           />
           }
           {
-            !showBurgerIcon &&
+            !showBurgerIcon && isHeader &&
           <Image
             src={"/icon-close.svg"}
             width={20}
