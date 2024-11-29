@@ -1,6 +1,9 @@
 @import "../../app/variables.scss";
 
 #contact-page {
+    background: url("/bg-pattern-leaf.jpg");
+   
+
     padding: 0px 164px 0px 165px;
 
     @media (max-width: $maxTablet) {
@@ -12,6 +15,7 @@
     }
 }
 
+//overwrite the footer settings from the component when he goes to contact route
 .footer {
     height:337px;
     padding: 72px 165px; 
