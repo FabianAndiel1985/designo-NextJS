@@ -1,22 +1,25 @@
 'use client'
-
 import React from 'react'
 import { useContext } from "react";
 import { AppContext } from "@/context/context";
 import "./HamburgerMenu.scss";
-
+import Link from 'next/link';
+import { texts } from '@/mocks/BurgerMenuData';
 
 const HamburgerMenu = () => {
 
-    const {showBurgerMenu} = useContext( AppContext);
-    const texts = ["our company", "locations", "contact"]
+  const {showBurgerMenu,toggleBurgerMenu} = useContext( AppContext);
 
   return (
     <>
       <ul className={`menu-elements ${!showBurgerMenu && "hide-burger-menu"} `}>
           {
               texts.map(e=>(
-                  <li> {e.toUpperCase()} </li>
+                  <li> 
+                    <Link href={`${e.link}`}
+                    onClick={()=>{toggleBurgerMenu(false)}}
+                    >{e.heading.toUpperCase()} </Link>
+                  </li>
               ))
           }
       </ul>

@@ -13,9 +13,10 @@ const NavbarBurgerMenu = ({isHeader}) => {
   const {toggleBurgerMenu} = useContext(AppContext);
 
 
+
   return (
    <>
-   { showBurgerIcon && isHeader &&
+   { showBurgerIcon  && isHeader &&
           <Image
             src={"/icon-hamburger.svg"}
             width={16}
