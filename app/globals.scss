@@ -1,8 +1,7 @@
 @import "./variables.scss";
 
-
-
   main {
+    position: relative;
     .top-box-mobile {
       @media (min-width: $maxMobile) {
         display: none;
@@ -19,6 +18,10 @@
         }
       }
     }
+  }
+  
+  .header-footer-container {
+    position:relative;
   }
 
 :root {

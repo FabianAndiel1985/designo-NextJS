@@ -3,7 +3,7 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Header/Navbar";
 import "./globals.scss";
 import AppContextProvider from "@/context/context";
-
+import Overlay from "@/components/Main/Overlay";
 
 
 export const metadata = {
@@ -23,13 +23,14 @@ export default function RootLayout({ children }) {
         </header>
         <div className="header-footer-container">
             <HamburgerMenu/>
+            <Overlay/>
           <main>
             {children}
           </main>
-        </div>
         <footer>
             <Footer/>
         </footer>
+        </div>
         </AppContextProvider>
       </body>
     </html>

@@ -7,7 +7,7 @@ export default function AppContextProvider({ children }) {
     const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
     const toggleBurgerMenu = (value)=>{
-        setShowBurgerMenu(value);
+        setShowBurgerMenu((value)=>!value);
     }
 
     const value = {
