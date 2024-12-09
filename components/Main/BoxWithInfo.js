@@ -4,9 +4,6 @@ import "./BoxWithInfo.scss"
 import Image from 'next/image'
 
 const BoxWithInfo = ({element}) => {
-
-    console.log(element);
-
   return (
     <div className={`box-with-info ${element.type !== 'country' ? 'attribute' : ''}`}>
         <div className={"box-with-info__image"}>
