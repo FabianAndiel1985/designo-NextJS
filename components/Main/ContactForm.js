@@ -5,6 +5,7 @@ import Button from './Button';
 import "./ContactForm.scss";
 import * as Yup from 'yup'; 
 import { FormError } from './FormError';
+import axios from 'axios';
 
 export const ContactForm = () => {
 
@@ -28,11 +29,15 @@ export const ContactForm = () => {
           message:''
         },
         validationSchema,
-        onSubmit: (values,{resetForm} ) => {
-          alert(JSON.stringify(values, null, 2));
+        onSubmit: async (values,{resetForm} ) => {
+          alert("The following data will be send to an endpoint: "+JSON.stringify(values, null, 2));
+          await axios.post("https://webhook.site/0f3b0290-f5da-462b-9b4e-5b8794207e63", values);
           resetForm();
         },
       });
+
+
+      
 
       
       return (

@@ -4,7 +4,6 @@ import Button from './Button';
 
 export const TextBox = () => {
 
-
   return (
     <>
     <div className={"text-box"} >
