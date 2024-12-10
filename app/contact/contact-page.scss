@@ -14,19 +14,3 @@
         padding: 0px;
     }
 }
-
-//overwrite the footer settings from the component when he goes to contact route
-.footer {
-    height:337px;
-    padding: 72px 165px; 
-
-    @media (max-width: $maxTablet) {
-        padding: 80px 39px;
-    }
-
-    @media (max-width: $maxMobile) {
-        height:626px;
-        padding: 64px 24px;
-    }
-}
-

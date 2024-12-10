@@ -50,5 +50,18 @@
         height:815px;
         padding: 253px 24px 64px 24px;
       }
+}
 
+.conact-footer {
+    height:337px;
+    padding: 72px 165px; 
+
+    @media (max-width: $maxTablet) {
+        padding: 80px 39px;
+    }
+
+    @media (max-width: $maxMobile) {
+        height:626px;
+        padding: 64px 24px;
+    }
 }

@@ -5,10 +5,10 @@ import AddressesSocialMedia from './AddressesSocialMedia';
 import NavbarTexts from '../Header/NavbarTexts';
 
 
-const Footer = () => {
- 
+const Footer = ({footerClass}) => {
   return (
-    <div className='footer'>
+   <>      
+   <div className={`${footerClass}`}>
       <Navbar logoSrc={"/logo-light.png"} isHeader={false} brightLinks={true} hideOnMobile={true}/>
       <hr/>
       <div className={"hideOnBiggerThanMobile"}>
@@ -16,6 +16,8 @@ const Footer = () => {
       </div>
       <AddressesSocialMedia/>
     </div>
+  </>
+
   )
 }
 

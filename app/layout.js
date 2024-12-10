@@ -1,9 +1,9 @@
 import HamburgerMenu from "@/components/Main/HamburgerMenu";
-import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Header/Navbar";
 import "./globals.scss";
 import AppContextProvider from "@/context/context";
 import Overlay from "@/components/Main/Overlay";
+import FooterParent from "@/components/Footer/FooterParent";
 
 
 export const metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         <footer>
-            <Footer/>
+            <FooterParent/>
         </footer>
         </div>
         </AppContextProvider>
